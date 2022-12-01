@@ -22,3 +22,9 @@ class TestPylenght:
         prog = ""
         filepath = save_as_file(prog, "empty", tmp_path)
         check.equal(pylenght(filepath), 0)
+
+    def test_assignment(self, tmp_path: Path):
+        """assignment should be of lenght of line."""
+        prog = "variable = 42"
+        filepath = save_as_file(prog, "assignment", tmp_path)
+        check.equal(pylenght(filepath), len(prog))

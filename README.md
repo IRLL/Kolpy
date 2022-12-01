@@ -1,9 +1,9 @@
 # **Kolpy**
 
-Short description of the project.
+A package to compute upper bounds of kolmogorov complexity of a python code script.
 
 <p align="center">
-  <img src="assets/myproject.png" alt="General illustration of the project" width="60%"/>
+  <img src="assets/kolmogorov-complexity-joke.png" alt="General illustration of the Kolpy" width="35%"/>
 </p>
 
 # Why Kolpy ?

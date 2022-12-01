@@ -13,8 +13,12 @@ def save_as_file(program: str, filename: str, folder_path: Path) -> Path:
     return filepath
 
 
-def test_pylenght(tmp_path: Path):
+class TestPylenght:
+
     """Check that programs are of expected lenghts"""
-    prog = ""
-    filepath = save_as_file(prog, "empty", tmp_path)
-    check.equal(pylenght(filepath), 0)
+
+    def test_empty(self, tmp_path: Path):
+        """empty program should be of lenght 0."""
+        prog = ""
+        filepath = save_as_file(prog, "empty", tmp_path)
+        check.equal(pylenght(filepath), 0)

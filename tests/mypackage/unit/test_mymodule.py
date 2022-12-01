@@ -1,6 +1,6 @@
 import pytest_check as check
 
-from mypackage.mymodule import my_perfect_function
+from kolpy.mymodule import my_perfect_function
 
 
 def test_fizz():

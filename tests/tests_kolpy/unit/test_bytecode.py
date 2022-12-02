@@ -6,7 +6,17 @@ from kolpy.bytecode import bytecode_lenght
 
 
 def test_assignment():
-    """An assignment should have a bytecode lenght of 4 = 2 LOAD + 1 STORE + 1 RETURN"""
+    """A simple assignment should have expected bytecode lenght"""
 
     script = "variable = 42"
-    check.equal(bytecode_lenght(script), 4)
+    check.equal(bytecode_lenght(script), 181)
+
+
+def test_function():
+    """A function should have the complexity of its content."""
+
+    def myfunc(x, y):
+        return (2 * x + y) == 0
+
+    prog = "(2 * x + y) == 0"
+    check.equal(bytecode_lenght(myfunc), bytecode_lenght(prog))

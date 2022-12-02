@@ -4,5 +4,5 @@ import dis
 
 
 def bytecode_lenght(script):
-    """Compute the number of instructions in the bytecode of a given script."""
-    return len(list(dis.get_instructions(script)))
+    """Compute the bytecode lenght of a given script."""
+    return len(dis.Bytecode(script).dis())

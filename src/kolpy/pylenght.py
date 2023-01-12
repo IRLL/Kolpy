@@ -3,6 +3,6 @@
 from pathlib import Path
 
 
-def pylenght(path: Path) -> int:
+def number_of_characters(path: Path) -> int:
     path = Path(path)
     return len(path.read_text(encoding="utf-8"))
